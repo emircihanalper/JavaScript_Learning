@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="writing">This is a Paragraph</p>
+
+    <p> This is another Paragraph </p>
+    <script>
+        document.write("This is additional information")
+        //with document.write code; you could print whatever written between " ". and wherever you move script text will be written in that area
+    </script>
+
+    <button onclick="document.write('How are you?')">PRESS</button>
+    <!-- When you click button. It completelely delete html's of page and just print the text writtne between " ". You could return when you refresh the page -->
+
+    <script>
+        document.getElementById("writing").innerHTML="What happened to me?"
+        //this getElementById completely change the paragraph id with the text written between " "
+        
+    </script>
+</body>
+</html>
