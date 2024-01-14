@@ -25,3 +25,50 @@
     </script>
 </body>
 </html>
+
+<!-- FARKLI ÖRNEK -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let x="Ertev"
+        document.write("<br>değer: "+x)
+        x=5
+        document.write("<br>değer: "+x)
+        //let x="Ermetal"
+        //document.write("<br>değer: "+x)
+        //Let ile tekrar tanımlama yapılamıyor
+    </script>
+</body>
+</html>
+
+<!-- FARKLI ÖRNEK -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        document.write(5%2)
+        let x =5
+        x++
+        document.write("<br>x değişkeninin değeri: "+x)
+        document.write("<br>x değişkeninin değeri: "+(x++))
+        document.write("<br>x değişkeninin değeri: "+x)
+        document.write("<br>x değişkeninin değeri: "+(++x))
+        let y =7
+        document.write("<br>y değişkeninin 3 üssü: "+(y**3))
+    </script>
+</body>
+</html>
