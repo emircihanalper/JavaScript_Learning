@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Matematik Doğru Sayısı:</td>
+            <td><input type="text" id="matd"></td>
+            <td>Matematik Yanlış Sayısı:</td>
+            <td><input type="text" id="maty"></td>
+            <td>Matematik Net Sayısı:</td>
+            <td><input type="text" id="matn" readonly></td>
+        </tr>
+        <tr>
+            <td>Türkçe Doğru Sayısı:</td>
+            <td><input type="text" id="turd"></td>
+            <td>Türkçe Yanlış Sayısı:</td>
+            <td><input type="text" id="tury"></td>
+            <td>Türkçe Net Sayısı:</td>
+            <td><input type="text" id="turn" readonly></td>
+        </tr>
+        <tr>
+            <td>Fen Doğru Sayısı:</td>
+            <td><input type="text" id="fend"></td>
+            <td>Fen Yanlış Sayısı:</td>
+            <td><input type="text" id="feny"></td>
+            <td>Fen Net Sayısı:</td>
+            <td><input type="text" id="fenn" readonly></td>
+        </tr>
+        <tr>
+            <td>Sosyal Doğru Sayısı:</td>
+            <td><input type="text" id="sosd"></td>
+            <td>Sosyal Yanlış Sayısı:</td>
+            <td><input type="text" id="sosy"></td>
+            <td>Sosyal Net Sayısı:</td>
+            <td><input type="text" id="sosn" readonly></td>
+        </tr>
+        <tr>
+            <td>Orta Öğretim Başarı Puanı:</td>
+            <td><input type="text" id="oobp"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Puan/durum hesapla" onclick="hesapla()"></td>
+        </tr>
+    </table>
+        <h3><p id="sonuc"></p></h3>
+
+    <script>
+        function hesapla()
+        {
+            var md=Number(document.getElementById("matd").value); //javascript te convert gerekmiyor ama herhangi bir durum için number ifadesi kullanıldı
+            //console.log("Matematik doğru sayısı: "+md)
+            var my=Number(document.getElementById("maty").value);
+            mnet=md-(my/4);
+            //console.log("Matematik net sayısı: "+mnet)
+            document.getElementById("matn").value=mnet;
+
+            var td=Number(document.getElementById("turd").value);
+            var ty=Number(document.getElementById("tury").value);
+            tnet=td-(ty/4);
+            document.getElementById("turn").value=tnet;
+
+            var fd=Number(document.getElementById("fend").value);
+            var fy=Number(document.getElementById("feny").value);
+            fnet=fd-(fy/4);
+            document.getElementById("fenn").value=fnet;
+
+            var sd=Number(document.getElementById("sosd").value);
+            var sy=Number(document.getElementById("sosy").value);
+            snet=sd-(sy/4);
+            document.getElementById("sosn").value=snet;
+
+            var oobp=Number(document.getElementById("oobp").value);
+            puan=100+oobp+(mnet*2)+(fnet*1.5)+(tnet*1.5)+snet
+
+            if(puan<150)
+            {
+                document.getElementById("sonuc").innerHTML="Puanınız: "+puan+", Barajı geçemediniz!"
+            }
+            else if(puan>=150 & puan<180)
+            {
+                document.getElementById("sonuc").innerHTML="Puanınız: "+puan+", 2 yıllık MYO kazanmaya hak kazandınız"
+            }
+            else 
+            {
+                document.getElementById("sonuc").innerHTML="Puanınız: "+puan+", 4 yıllık bölüm kazanmaya hak kazandınız"
+            }
+        }
+    </script>
+</body>
+</html>
