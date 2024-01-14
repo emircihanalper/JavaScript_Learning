@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let x = 100
+        if(x==100)
+        {
+            document.write("sayı 100")
+        }
+        else if(x>100)
+        {
+            document.write("100 büyük")
+        }
+        else
+        {
+            document.write("100 küçük")
+        }
+
+    </script>
+</body>
+</html>
+
+<!-- FARKLI ÖRNEK-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>KİLO BOY VÜCUT KİTLE ENDEKSİ</h1>
+    <p id="yazi"></p>
+    
+    
+    <script>
+        let x
+        x=endeks(83,1.75)        
+        function endeks(kilo,boy)
+        {
+            return (kilo/(boy*boy)).toFixed(2)
+        }
+        if(x<18.5)
+        {
+            document.getElementById("yazi").innerHTML="Endeksiniz: "+x+" Zayıf"
+        }
+        else if(x>=18.5 && x<24.99)
+        {
+            document.getElementById("yazi").innerHTML="Endeksiniz: "+x+" Normal"
+        }
+        else if(x>=25 && x<29.99)
+        {
+            document.getElementById("yazi").innerHTML="Endeksiniz: "+x+" Fazla Kilolu"
+        }
+        else if(x>=30 && x<34.99)
+        {
+            document.getElementById("yazi").innerHTML="Endeksiniz: "+x+" Obez"
+        }
+        else{
+            document.getElementById("yazi").innerHTML="Endeksiniz: "+x+" Norbit"
+        }
+    </script>
+</body>
+</html>
+
+<!-- FARKLI ÖRNEK-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="yazi"></p>
+
+    <script>
+        let cinsiyet="Erkek"
+        let yas=25
+        //cinsiyet ve yaş değerlerine göre askerlik durumu 
+        if (cinsiyet=="Erkek")
+        {
+            if(yas>=20)
+            {
+                document.getElementById("yazi").innerHTML="Askerlik çağı, en yakın şubeye gidin"
+            }
+            else
+            {
+                document.getElementById("yazi").innerHTML="20 yaşından sonra en yakın şubeye gidin"
+            }
+        }
+        else
+        {
+            document.getElementById("yazi").innerHTML="Askerlikten Muaf"
+        }
+
+    </script>
+</body>
+</html>
