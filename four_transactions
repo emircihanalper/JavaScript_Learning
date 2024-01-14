@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="topla(5,10)">Topla</button>
+    <br>
+    <button onclick="cikar(5,10)">Çıkar</button>
+    <br>
+    <button onclick="carp(5,10)">Çarp</button>
+    <br>
+    <button onclick="bol(5,10)">Böl</button>
+    <script>
+        function topla(p1,p2)
+        {
+            x=p1+p2   
+            document.write("toplam değer: "+x)     
+            document.write("<br>"+p1+" + "+p2+" = "+(p1+p2)) 
+        }
+        function cikar(p1,p2)
+        {
+            x=p1-p2    
+            document.write("çıkarma değeri: "+x)  
+            document.write("<br>"+p1+" - "+p2+" = "+(p1-p2))       
+        }
+        function carp(p1,p2)
+        {
+            x=p1*p2    
+            document.write("çarpım değeri: "+x)  
+            document.write("<br>"+p1+" * "+p2+" = "+(p1*p2))                     
+        }
+        function bol(p1,p2)
+        {
+            x=p1/p2 
+            document.write("bölüm değeri: "+x)   
+            document.write("<br>"+p1+" / "+p2+" = "+(p1/p2))                      
+        }
+    </script>
+</body>
+</html>
