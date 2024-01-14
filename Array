@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const kisi={ad:"Murat",soyad:"Çatmalı",yas:18,cinsiyet:"Erkek",askerlik:true}
+        const kisiler=["Murat","Cihan","Merve",20]
+        document.write("Adınız: "+kisi.ad)
+        document.write("<br>Soyadınız: "+kisi.soyad+"<br>")
+        document.write(kisi) //veri tipini yazdırma 
+        document.write("<br>"+kisiler) //objenin aksine array direk yazdırabilir
+        
+    </script>
+</body>
+</html>
