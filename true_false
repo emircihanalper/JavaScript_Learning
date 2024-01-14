@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let x = 10
+        let y = 20
+        let z = 10
+        let k = "10"
+        let ad
+        document.write(x==y)
+        document.write("<br>"+(x==z))
+        document.write("<br>"+(x==k))
+        document.write("<br>"+(x===k))
+        //üç adet eşitlik hem tip hem içerik olarak eşitlik bakıyor
+        document.write("<br>"+ad)
+    </script>
+</body>
+</html>
