@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script ile CSS Erişimi</title>
+    <style>
+        .stilim
+        {
+            font-size:16px;
+            color:green;
+            background-color: bisque;
+            width:50%;
+            height:100px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="yazi" class="stilim">
+        ERTEV TEKNOLOJİK EĞİTİMLER VAKFI
+    </div>
+    Yazı Rengi:
+    <select id="yazirenk" onchange=renkdegistir()>
+        <option value="blue">Mavi</option>
+        <option value="red">Kırmızı</option>
+        <option value="green">Yeşil</option>
+    </select>
+    Arka Plan Rengi:
+    <select id="arkarenk" onchange=renkdegistir()>
+        <option value="blue">Mavi</option>
+        <option value="red">Kırmızı</option>
+        <option value="bisque">Bisküvi</option>
+    </select>
+    
+    <script>
+        function renkdegistir()
+        {
+            var secrenk=document.getElementById("yazirenk").value;
+            document.getElementById("yazi").style.color=secrenk;
+            var sec2renk=document.getElementById("arkarenk").value;
+            document.getElementById("yazi").style.backgroundColor=sec2renk;
+        }
+    </script>
+</body>
+</html>
