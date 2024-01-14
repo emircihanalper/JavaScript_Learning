@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Kullanıcı Girişi</h3>
+    <table>
+        <tr>
+            <td>Kullanıcı Adı:</td>
+            <td><input type="text" id="kuladi"></td>
+        </tr>
+        <tr>
+            <td>Şifre:</td>
+            <td><input type="text" id="sifre"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Giriş" onclick=kontrol()></td>
+        </tr>
+    </table>
+        <h3><p id="yazi"></p></h3>
+
+    <script>
+        function kontrol()
+        {
+            var kuladi=document.getElementById("kuladi").value;
+            var sifre=document.getElementById("sifre").value;
+            if(kuladi=="ertev" & sifre=="1234")
+            {
+                document.getElementById("yazi").innerHTML="Kullanıcı adı ve şifre doğru"
+            }
+            else
+            document.getElementById("yazi").innerHTML="Kullanıcı adı ve/veya şifre yanlış"
+        }
+    </script>
+</body>
+</html>
