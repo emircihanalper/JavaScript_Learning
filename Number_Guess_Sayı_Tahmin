@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="giris" max="9" min="0">
+    <button id="tahminbtn" onclick="tahminfonk()">Tahmin Et</button>
+
+    <script>
+        rast=Math.floor(Math.random()*10)
+        console.log("Üretilen Sayı: "+rast)
+        saydir=3
+        function tahminfonk()
+        {
+            saydir--
+            if(saydir>0)
+            {
+                sayi=document.getElementById("giris").value;
+                console.log("Tahminimiz: "+sayi)
+                    if(rast==sayi)
+                    {
+                        Alert("Bravo Bildiniz")
+                        tahminbtn.disabled=true
+                    }
+                    else if(sayi>rast)
+                    {
+                        alert("Küçült...")
+                    }
+                    else
+                    {
+                        alert("Büyült...")
+                    }
+            }
+            else
+            {
+                alert("Malesef 3 hakkınız bitti")
+                tahminbtn.disabled=true
+            }
+            alert("Kalan tahmin sayısı: "+saydir)            
+        }
+
+        /* FARKLI GÖSTERİM
+        function tahminfonk()
+        {
+            saydir--            
+            sayi=document.getElementById("giris").value;
+            console.log("Tahminimiz: "+sayi)
+                    if(rast==sayi)
+                    {
+                        Alert("Bravo Bildiniz")
+                        tahminbtn.disabled=true
+                    }
+                    else if(sayi>rast)
+                    {
+                        alert("Küçült...")
+                    }
+                    else
+                    {
+                        alert("Büyült...")
+                    }
+           if(saydir==0)
+           {
+                alert("Malesef 3 hakkınız bitti")
+                tahminbtn.disabled=true
+            }
+            alert("Kalan tahmin sayısı: "+saydir)            
+        }
+        */
+    </script>
+
+    
+</body>
+</html>
