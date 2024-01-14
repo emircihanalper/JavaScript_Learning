@@ -1,0 +1,92 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direnç Örneği</title>
+    <style>
+        table, tr, td {
+        border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>DİRENÇ HESAPLAMA</h1>
+    1. Renk:
+    <select id="renk1" >
+        <option value="0">Siyah</option>
+        <option value="1">Kahverengi</option>
+        <option value="2">Kırmızı</option>
+        <option value="3">Turuncu</option>
+        <option value="4">Sarı</option>
+        <option value="5">Yeşil</option>
+        <option value="6">Mavi</option>
+        <option value="7">Mor</option>
+        <option value="8">Gri</option>
+        <option value="9">Beyaz</option>
+    </select> 
+    2. Renk:
+    <select id="renk2" >
+        <option value="0">Siyah</option>
+        <option value="1">Kahverengi</option>
+        <option value="2">Kırmızı</option>
+        <option value="3">Turuncu</option>
+        <option value="4">Sarı</option>
+        <option value="5">Yeşil</option>
+        <option value="6">Mavi</option>
+        <option value="7">Mor</option>
+        <option value="8">Gri</option>
+        <option value="9">Beyaz</option>
+    </select> 
+    3. Renk:
+    <select id="renk3" >
+        <option value="0">Siyah</option>
+        <option value="1">Kahverengi</option>
+        <option value="2">Kırmızı</option>
+        <option value="3">Turuncu</option>
+        <option value="4">Sarı</option>
+        <option value="5">Yeşil</option>
+        <option value="6">Mavi</option>
+        <option value="7">Mor</option>
+        <option value="8">Gri</option>
+        <option value="9">Beyaz</option>
+    </select> 
+    Tolerans:
+    <select id="tolerans" >
+        <option value="0">Altın</option>
+        <option value="1">Gümüş</option>
+        <option value="2">Renksiz</option>
+    </select> <br>
+    <input type="button" value="HESAPLA" onclick=hesapla()>
+    Sonuç: <p id="sonuc"></p>
+    <table>
+        <tr>
+            <td id="kutu1" width="100" height="100"></td>
+            <td id="kutu2" width="100" height="100"></td>
+            <td id="kutu3" width="100" height="100"></td>
+            <td id="kutu4" width="100" height="100"></td>
+        </tr>
+    </table>
+    <script>
+        function hesapla()
+        {
+            var renk1=Number(document.getElementById("renk1").value);
+            var renk2=Number(document.getElementById("renk2").value);
+            var renk3=Number(document.getElementById("renk3").value);
+            var tolerans=Number(document.getElementById("tolerans").value);
+            hesap=((renk1*10)+renk2)*Math.pow(10,renk3)
+            hesap2=hesap/1000
+            var tol2=["5","10","20"]
+            document.getElementById("sonuc").innerHTML=hesap + " Ohm ±%"+tol2[tolerans]+"<br>"+hesap2 + " kilo Ohm ±%"+tol2[tolerans];
+            //
+            //document.getElementById("sonuc").innerHTML=hesap2 + "KiloOhm +-%"+tolerans;
+            var renk=["black","brown","red","orange","yellow","green","blue","purple","grey","white"]
+            var renktol=["gold","silver","none"]
+            document.getElementById("kutu1").style.backgroundColor=renk[renk1]
+            document.getElementById("kutu2").style.backgroundColor=renk[renk2]
+            document.getElementById("kutu3").style.backgroundColor=renk[renk3]
+            document.getElementById("kutu4").style.backgroundColor=renktol[tolerans]
+        }
+    </script>
+</body>
+</html>
