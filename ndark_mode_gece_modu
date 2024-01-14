@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Ekran Modu Seçimi</h2>
+    <input type="button" value="Gündüz Modu" onclick=gunduz()><br><br>
+    <input type="button"  value="Gece Modu" onclick=gece()>
+
+    <script>
+        function gece()
+        {
+            document.body.style.backgroundColor="black";
+            document.body.style.color="white";            
+        }
+        function gunduz()
+        {
+            document.body.style.backgroundColor="white";
+            document.body.style.color="black";            
+        }
+
+    </script>
+</body>
+</html>
