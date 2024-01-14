@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        x=10
+        y='Ertev'
+        z=true
+        k=8.2
+        document.write("<br>x değişkenin değeri "+x+"<br>")
+        document.write("x değişkeninin tipi: "+typeof(x))
+        x='Web Tasarım'
+        document.write("<br>x değişkenin değeri "+x+"<br>")
+        document.write("x değişkeninin tipi: "+typeof(x))
+        document.write("<br>k değişkenin değeri "+k+"<br>")
+        document.write("k değişkeninin tipi: "+typeof(k))
+        document.write("<br>z değişkenin değeri "+z+"<br>")
+        document.write("z değişkeninin tipi: "+typeof(z))
+    </script>
+</body>
+</html>
