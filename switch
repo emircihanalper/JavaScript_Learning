@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Gün no giriniz: <input type="text" id="gno">
+    <br>
+    
+    <button onclick="gunyaz()">YAZ</button> 
+    
+    <script>
+        function gunyaz()
+        {
+            let gunno=document.getElementById("gno").value
+            switch(Number(gunno))
+            {
+                case 0:
+                    window.alert("Pazar");
+                    break;
+                case 1:
+                    window.alert("Pazartesi");
+                    break;
+                case 2:
+                    window.alert("Salı");
+                    break;
+                case 3:
+                    window.alert("Çarşamba");
+                    break;
+                case 4:
+                    window.alert("Perşembe");
+                    break;
+                case 5:
+                    window.alert("Cuma");
+                    break;
+                case 6:
+                    window.alert("Cumartesi");
+                    break;
+                default:
+                    window.alert("0-6 Arası olmalı");
+                    break;
+            }
+                
+        }
+
+      /*  switch(new Date().getDay())
+        {
+            case 0:
+                day ="Pazar";
+                break;
+            case 1:
+                day ="Pazartesi";
+                break;
+            case 2:
+                day ="Salı";
+                break;
+            case 3:
+                day ="Çarşamba";
+                break;
+            case 4:
+                day ="Perşembe";
+                break;
+            case 5:
+                day ="Cuma";
+                break;
+            case 6:
+                day ="Cumartesi";
+                break;
+        }*/
+    </script>
+</body>
+</html>
